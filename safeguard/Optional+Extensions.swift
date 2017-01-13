@@ -9,7 +9,7 @@
 import Foundation
 
 extension Optional {
-    func safeguard(file: String = #file, caller: String = #function, line: Int = #line) -> Optional {
+    public func safeguard(file: String = #file, caller: String = #function, line: Int = #line) -> Optional {
         if self == nil {
             let type: Wrapped.Type = Wrapped.self
             let fileName: String = URL(fileURLWithPath: file).lastPathComponent

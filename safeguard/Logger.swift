@@ -23,11 +23,11 @@ struct Logger {
         }
     }
 
-    func warn(message: String, properties: [String: Any]?) {
+    public func warn(message: String, properties: [String: Any]?) {
         log(withLevel: .warn, message: message, properties: properties)
     }
 
-    func debug(message: String, properties: [String: Any]?) {
+    public func debug(message: String, properties: [String: Any]?) {
         log(withLevel: .debug, message: message, properties: properties)
     }
 }
