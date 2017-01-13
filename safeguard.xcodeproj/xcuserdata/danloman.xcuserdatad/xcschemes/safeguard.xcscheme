@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22ECFF6F1E286D1800D2BF1E"
+               BuildableName = "safeguard.framework"
+               BlueprintName = "safeguard"
+               ReferencedContainer = "container:safeguard.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -26,6 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "22ECFF6F1E286D1800D2BF1E"
+            BuildableName = "safeguard.framework"
+            BlueprintName = "safeguard"
+            ReferencedContainer = "container:safeguard.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "22ECFF6F1E286D1800D2BF1E"
+            BuildableName = "safeguard.framework"
+            BlueprintName = "safeguard"
+            ReferencedContainer = "container:safeguard.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
@@ -42,5 +76,14 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "set -e&#10;&#10;BUILD_INTERMEDIATES=&quot;${OBJROOT}&quot;&#10;BUILD_PRODUCTS=&quot;${SYMROOT}/../../../../Products&quot;&#10;DEVICE_BIN=&quot;${BUILD_INTERMEDIATES}/UninstalledProducts/iphoneos/${TARGET_NAME}.framework&quot;&#10;SIMULATOR_BIN=&quot;${BUILD_PRODUCTS}/Debug-iphonesimulator/${TARGET_NAME}.framework&quot;&#10;&#10;ARCHIVE_PATH=&quot;${SRCROOT}/_Archive&quot;&#10;rm -rf &quot;${ARCHIVE_PATH}&quot;&#10;mkdir &quot;${ARCHIVE_PATH}&quot;&#10;&#10;if [ &quot;${CONFIGURATION}&quot; = &quot;Release&quot; ]; then&#10;if [ -d &quot;${DEVICE_BIN}&quot; ]; then&#10;DEVICE_PATH=&quot;${ARCHIVE_PATH}/Release&quot;&#10;mkdir &quot;${DEVICE_PATH}&quot;&#10;cp -r &quot;${DEVICE_BIN}&quot; &quot;${DEVICE_PATH}&quot;&#10;fi&#10;&#10;if [ -d &quot;${SIMULATOR_BIN}&quot; ]; then&#10;SIMULATOR_PATH=&quot;${ARCHIVE_PATH}/Debug&quot;&#10;mkdir &quot;${SIMULATOR_PATH}&quot;&#10;cp -r &quot;${SIMULATOR_BIN}&quot; &quot;${SIMULATOR_PATH}&quot;&#10;lipo -create &quot;${DEVICE_BIN}/${TARGET_NAME}&quot; &quot;${SIMULATOR_BIN}/${TARGET_NAME}&quot; -output  &quot;${SIMULATOR_PATH}/${TARGET_NAME}.framework/${TARGET_NAME}&quot;&#10;fi&#10;fi&#10;&#10;exit 0;">
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>
