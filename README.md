@@ -32,5 +32,5 @@ By separating cascading `let` statements onto separate lines we can get log the 
 
 That’s awesome! Here are a couple of ways you can help:
 
-[Report issues or suggest new features](https://github.com/namolnad/safeguard/issues)
-Write bug fixes and improvements and submit [pull requests](https://github.com/namolnad/safeguard/pulls)
+ * [Report issues or suggest new features](https://github.com/namolnad/safeguard/issues)
+ * Write bug fixes and improvements and submit [pull requests](https://github.com/namolnad/safeguard/pulls)
