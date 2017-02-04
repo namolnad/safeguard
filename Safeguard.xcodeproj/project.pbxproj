@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		224519161E458D2C004CDFAB /* Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EC1E457A85006096FE /* Safeguard.swift */; };
-		224519171E458D2C004CDFAB /* DefaultSafeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */; };
-		224519181E458D2C004CDFAB /* Dictionary+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */; };
-		224519191E458D2C004CDFAB /* Optional+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F01E457ADA006096FE /* Optional+Safeguard.swift */; };
+		227AE85C1E459791008DE1B3 /* Optional+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AE85B1E459791008DE1B3 /* Optional+Safeguard.swift */; };
 		22F955E11E457A51006096FE /* SafeguardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955E01E457A51006096FE /* SafeguardTests.swift */; };
 		22F955E31E457A51006096FE /* Safeguard.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F955D51E457A50006096FE /* Safeguard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22F955ED1E457A85006096FE /* Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EC1E457A85006096FE /* Safeguard.swift */; };
 		22F955EF1E457AB4006096FE /* DefaultSafeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */; };
-		22F955F11E457ADA006096FE /* Optional+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F01E457ADA006096FE /* Optional+Safeguard.swift */; };
 		22F955F31E457AFF006096FE /* Dictionary+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,15 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		227AE85B1E459791008DE1B3 /* Optional+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Safeguard.swift"; sourceTree = "<group>"; };
 		22F955D21E457A50006096FE /* Safeguard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Safeguard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F955D51E457A50006096FE /* Safeguard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Safeguard.h; sourceTree = "<group>"; };
 		22F955D61E457A50006096FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F955DB1E457A50006096FE /* SafeguardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafeguardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F955E01E457A51006096FE /* SafeguardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeguardTests.swift; sourceTree = "<group>"; };
 		22F955E21E457A51006096FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22F955EC1E457A85006096FE /* Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safeguard.swift; sourceTree = "<group>"; };
+		22F955EC1E457A85006096FE /* Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Safeguard.swift; path = Core/Safeguard.swift; sourceTree = "<group>"; };
 		22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSafeLogger.swift; sourceTree = "<group>"; };
-		22F955F01E457ADA006096FE /* Optional+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Safeguard.swift"; sourceTree = "<group>"; };
 		22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Safeguard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224519541E4594AD004CDFAB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				22F955EC1E457A85006096FE /* Safeguard.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		22F955C81E457A50006096FE = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +87,7 @@
 			children = (
 				22F955D51E457A50006096FE /* Safeguard.h */,
 				22F955D61E457A50006096FE /* Info.plist */,
-				22F955EC1E457A85006096FE /* Safeguard.swift */,
+				224519541E4594AD004CDFAB /* Core */,
 				22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */,
 				22F955F41E457B1B006096FE /* Extensions */,
 			);
@@ -103,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */,
-				22F955F01E457ADA006096FE /* Optional+Safeguard.swift */,
+				227AE85B1E459791008DE1B3 /* Optional+Safeguard.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -223,7 +227,7 @@
 			files = (
 				22F955F31E457AFF006096FE /* Dictionary+Safeguard.swift in Sources */,
 				22F955EF1E457AB4006096FE /* DefaultSafeLogger.swift in Sources */,
-				22F955F11E457ADA006096FE /* Optional+Safeguard.swift in Sources */,
+				227AE85C1E459791008DE1B3 /* Optional+Safeguard.swift in Sources */,
 				22F955ED1E457A85006096FE /* Safeguard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,10 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224519161E458D2C004CDFAB /* Safeguard.swift in Sources */,
-				224519171E458D2C004CDFAB /* DefaultSafeLogger.swift in Sources */,
-				224519181E458D2C004CDFAB /* Dictionary+Safeguard.swift in Sources */,
-				224519191E458D2C004CDFAB /* Optional+Safeguard.swift in Sources */,
 				22F955E11E457A51006096FE /* SafeguardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

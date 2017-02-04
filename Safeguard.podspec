@@ -17,5 +17,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => 'https://github.com/namolnad/Safeguard.git', :tag => "v#{s.version}" }
   s.source_files = "Safeguard", "Safeguard/**/*.{h,m,swift}", "Safeguard/*.{h,m,swift}"
+  s.public_header_files = ["Core/*.{h,swift}"]
 
 end
