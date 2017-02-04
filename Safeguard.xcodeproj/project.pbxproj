@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		227AE85B1E459791008DE1B3 /* Optional+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Safeguard.swift"; sourceTree = "<group>"; };
+		227AE85B1E459791008DE1B3 /* Optional+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Optional+Safeguard.swift"; path = "Extensions/Optional+Safeguard.swift"; sourceTree = "<group>"; };
 		22F955D21E457A50006096FE /* Safeguard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Safeguard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F955D51E457A50006096FE /* Safeguard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Safeguard.h; sourceTree = "<group>"; };
 		22F955D61E457A50006096FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		22F955E21E457A51006096FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F955EC1E457A85006096FE /* Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Safeguard.swift; path = Core/Safeguard.swift; sourceTree = "<group>"; };
 		22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSafeLogger.swift; sourceTree = "<group>"; };
-		22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Safeguard.swift"; sourceTree = "<group>"; };
+		22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Safeguard.swift"; path = "Extensions/Dictionary+Safeguard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
