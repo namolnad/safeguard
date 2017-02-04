@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "Safeguard"
-  s.version      = "1.0.0"
+  s.version      = "0.1.0"
   s.summary      = "A lightweight, flexible tool to help identify and log issues lost in Swift's guard statements."
 
   s.description  = <<-DESC
