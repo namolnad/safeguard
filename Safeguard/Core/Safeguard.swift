@@ -13,7 +13,7 @@ public protocol SafeLogger {
     func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String: Any]?)
 }
 
-class Safeguard {
+public class Safeguard {
     public static let instance: Safeguard = Safeguard()
 
     public var nilHandler: ((Bool) -> Void)?
