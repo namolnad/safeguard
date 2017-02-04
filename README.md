@@ -63,7 +63,7 @@ At configuration, Safeguard takes a `[String: Any]` param, which can be used to 
 The custom params can also be set directly, if needed: `Safeguard.instance.customLoggingParams = ["Crazy": "Info"]`
 
 ##### Nil Handler
-Lastly, the `configure` function takes an optional `nilHandler`, which is a closure that takes a `Bool` and returns nothing — `((Bool) -> Void)?`. This convenience callback is called (if non-nil) everytime an `Optional` has failed to unwrap. If the DEBUG flag has been set by your preprocessor macros, you will also get the additional information of whether the app is running in DEBUG mode (which defaults to false if the flag has not been set, FYI.)
+Lastly, the `configure` function takes an optional `nilHandler`, which is a closure that takes a `Bool` and returns nothing — `((Bool) -> Void)?`. After logging has executed, this convenience callback is called (if non-nil) everytime an `Optional` has failed to unwrap. If the DEBUG flag has been set by your preprocessor macros, you will also get the additional information of whether the app is running in DEBUG mode (which defaults to false if the flag has not been set, FYI.)
 
 This callback can be useful for scenarios where you perhaps want to cause a crash, or present an alert during development, so you can be sure you notice the issue immediately. Similarly to above, this can be set directly:
 ```Swift
