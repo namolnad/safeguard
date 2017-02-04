@@ -1,5 +1,5 @@
 //
-//  DefaultLogger.swift
+//  DefaultSafeLogger.swift
 //  Safeguard
 //
 //  Created by Dan Loman on 2/3/17.

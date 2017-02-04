@@ -13,13 +13,13 @@ public protocol SafeLogger {
     func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String: Any]?)
 }
 
-public class Safeguard {
+class Safeguard {
     public static let instance: Safeguard = Safeguard()
 
     public var nilHandler: ((Bool) -> Void)?
 
     public var logger: SafeLogger? = DefaultSafeLogger()
-    
+
     public var customLoggingParams: [String: Any]?
 
     public static func configure(logger: SafeLogger? = nil, customLoggingParams: [String: Any]? = nil, nilHandler: ((Bool) -> Void)? = nil) {
