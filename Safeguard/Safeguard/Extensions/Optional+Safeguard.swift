@@ -15,22 +15,29 @@ extension Optional {
             let fileName: String = URL(fileURLWithPath: file).lastPathComponent
             let message: String = "Guard failed with type: \(type)"
 
-            let params: [String: Any] = [
+            var params: [String: Any] = [
                 "failed_unwrap_type": type,
                 "file": fileName,
                 "called_from": caller,
                 "line": line
             ]
 
+            if let customParams = Safeguard.instance.customLoggingParams {
+                params += customParams
+            }
+
+            let safeguardLogger: SafeLogger? = Safeguard.instance.logger
+
+            var isDebug = false
+
             #if DEBUG
-                print("\(message) with params:\(params)")
-                // If you have your own logging tool in place, perhaps pass the logging through that instead of printing here
-                // log.debug(message: message, properties: params)
-                assertionFailure()
+                safeguardLogger?.debug("\(message) and params: \(params)")
+                isDebug = true
             #else
-                print("\(message) with params:\(params)")
-                // log.warn(message: message, properties: params)
+                safeguardLogger?.warn(message: message, properties: params)
             #endif
+
+            Safeguard.instance.nilHandler?(isDebug)
         }
         return self
     }
