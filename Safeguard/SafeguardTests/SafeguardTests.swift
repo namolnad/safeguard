@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Safeguard
+@testable import Safeguard
 
 class SafeguardTests: XCTestCase {
     var emptyOptional: String?

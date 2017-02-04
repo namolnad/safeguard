@@ -7,127 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22DC0B131E452FF100B12774 /* Safeguard.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DC0B111E452FF100B12774 /* Safeguard.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22DC0B1C1E45311D00B12774 /* Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC0B1B1E45311D00B12774 /* Safeguard.swift */; };
-		22DC0B1E1E45312D00B12774 /* DefaultSafeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC0B1D1E45312D00B12774 /* DefaultSafeLogger.swift */; };
-		22DC0B201E4531BA00B12774 /* Dictionary+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC0B1F1E4531BA00B12774 /* Dictionary+Safeguard.swift */; };
-		22DC0B231E45320900B12774 /* Optional+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC0B221E45320900B12774 /* Optional+Safeguard.swift */; };
-		22DC0B461E4559AD00B12774 /* SafeguardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DC0B451E4559AD00B12774 /* SafeguardTests.swift */; };
-		22DC0B481E4559AD00B12774 /* Safeguard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DC0B0E1E452FF100B12774 /* Safeguard.framework */; };
+		22F955E11E457A51006096FE /* SafeguardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955E01E457A51006096FE /* SafeguardTests.swift */; };
+		22F955E31E457A51006096FE /* Safeguard.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F955D51E457A50006096FE /* Safeguard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22F955ED1E457A85006096FE /* Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EC1E457A85006096FE /* Safeguard.swift */; };
+		22F955EF1E457AB4006096FE /* DefaultSafeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */; };
+		22F955F11E457ADA006096FE /* Optional+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F01E457ADA006096FE /* Optional+Safeguard.swift */; };
+		22F955F31E457AFF006096FE /* Dictionary+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		22DC0B491E4559AD00B12774 /* PBXContainerItemProxy */ = {
+		22F955DD1E457A50006096FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 22DC0B051E452FF100B12774 /* Project object */;
+			containerPortal = 22F955C91E457A50006096FE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 22DC0B0D1E452FF100B12774;
+			remoteGlobalIDString = 22F955D11E457A50006096FE;
 			remoteInfo = Safeguard;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22DC0B0E1E452FF100B12774 /* Safeguard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Safeguard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22DC0B111E452FF100B12774 /* Safeguard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Safeguard.h; sourceTree = "<group>"; };
-		22DC0B121E452FF100B12774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22DC0B1B1E45311D00B12774 /* Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safeguard.swift; sourceTree = "<group>"; };
-		22DC0B1D1E45312D00B12774 /* DefaultSafeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSafeLogger.swift; sourceTree = "<group>"; };
-		22DC0B1F1E4531BA00B12774 /* Dictionary+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Safeguard.swift"; path = "Extensions/Dictionary+Safeguard.swift"; sourceTree = "<group>"; };
-		22DC0B221E45320900B12774 /* Optional+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Optional+Safeguard.swift"; path = "Extensions/Optional+Safeguard.swift"; sourceTree = "<group>"; };
-		22DC0B431E4559AD00B12774 /* SafeguardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafeguardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22DC0B451E4559AD00B12774 /* SafeguardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeguardTests.swift; sourceTree = "<group>"; };
-		22DC0B471E4559AD00B12774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F955D21E457A50006096FE /* Safeguard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Safeguard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F955D51E457A50006096FE /* Safeguard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Safeguard.h; sourceTree = "<group>"; };
+		22F955D61E457A50006096FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F955DB1E457A50006096FE /* SafeguardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafeguardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F955E01E457A51006096FE /* SafeguardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeguardTests.swift; sourceTree = "<group>"; };
+		22F955E21E457A51006096FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F955EC1E457A85006096FE /* Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safeguard.swift; sourceTree = "<group>"; };
+		22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSafeLogger.swift; sourceTree = "<group>"; };
+		22F955F01E457ADA006096FE /* Optional+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Safeguard.swift"; sourceTree = "<group>"; };
+		22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Safeguard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		22DC0B0A1E452FF100B12774 /* Frameworks */ = {
+		22F955CE1E457A50006096FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22DC0B401E4559AD00B12774 /* Frameworks */ = {
+		22F955D81E457A50006096FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DC0B481E4559AD00B12774 /* Safeguard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		22DC0B041E452FF100B12774 = {
+		22F955C81E457A50006096FE = {
 			isa = PBXGroup;
 			children = (
-				22DC0B101E452FF100B12774 /* Safeguard */,
-				22DC0B441E4559AD00B12774 /* SafeguardTests */,
-				22DC0B0F1E452FF100B12774 /* Products */,
+				22F955D41E457A50006096FE /* Safeguard */,
+				22F955DF1E457A51006096FE /* SafeguardTests */,
+				22F955D31E457A50006096FE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		22DC0B0F1E452FF100B12774 /* Products */ = {
+		22F955D31E457A50006096FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22DC0B0E1E452FF100B12774 /* Safeguard.framework */,
-				22DC0B431E4559AD00B12774 /* SafeguardTests.xctest */,
+				22F955D21E457A50006096FE /* Safeguard.framework */,
+				22F955DB1E457A50006096FE /* SafeguardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22DC0B101E452FF100B12774 /* Safeguard */ = {
+		22F955D41E457A50006096FE /* Safeguard */ = {
 			isa = PBXGroup;
 			children = (
-				22DC0B111E452FF100B12774 /* Safeguard.h */,
-				22DC0B121E452FF100B12774 /* Info.plist */,
-				22DC0B1B1E45311D00B12774 /* Safeguard.swift */,
-				22DC0B1D1E45312D00B12774 /* DefaultSafeLogger.swift */,
-				22DC0B211E4531E900B12774 /* Extensions */,
+				22F955D51E457A50006096FE /* Safeguard.h */,
+				22F955D61E457A50006096FE /* Info.plist */,
+				22F955EC1E457A85006096FE /* Safeguard.swift */,
+				22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */,
+				22F955F41E457B1B006096FE /* Extensions */,
 			);
 			path = Safeguard;
 			sourceTree = "<group>";
 		};
-		22DC0B211E4531E900B12774 /* Extensions */ = {
+		22F955DF1E457A51006096FE /* SafeguardTests */ = {
 			isa = PBXGroup;
 			children = (
-				22DC0B221E45320900B12774 /* Optional+Safeguard.swift */,
-				22DC0B1F1E4531BA00B12774 /* Dictionary+Safeguard.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		22DC0B441E4559AD00B12774 /* SafeguardTests */ = {
-			isa = PBXGroup;
-			children = (
-				22DC0B451E4559AD00B12774 /* SafeguardTests.swift */,
-				22DC0B471E4559AD00B12774 /* Info.plist */,
+				22F955E01E457A51006096FE /* SafeguardTests.swift */,
+				22F955E21E457A51006096FE /* Info.plist */,
 			);
 			path = SafeguardTests;
+			sourceTree = "<group>";
+		};
+		22F955F41E457B1B006096FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */,
+				22F955F01E457ADA006096FE /* Optional+Safeguard.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		22DC0B0B1E452FF100B12774 /* Headers */ = {
+		22F955CF1E457A50006096FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DC0B131E452FF100B12774 /* Safeguard.h in Headers */,
+				22F955E31E457A51006096FE /* Safeguard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		22DC0B0D1E452FF100B12774 /* Safeguard */ = {
+		22F955D11E457A50006096FE /* Safeguard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22DC0B161E452FF100B12774 /* Build configuration list for PBXNativeTarget "Safeguard" */;
+			buildConfigurationList = 22F955E61E457A51006096FE /* Build configuration list for PBXNativeTarget "Safeguard" */;
 			buildPhases = (
-				22DC0B091E452FF100B12774 /* Sources */,
-				22DC0B0A1E452FF100B12774 /* Frameworks */,
-				22DC0B0B1E452FF100B12774 /* Headers */,
-				22DC0B0C1E452FF100B12774 /* Resources */,
+				22F955CD1E457A50006096FE /* Sources */,
+				22F955CE1E457A50006096FE /* Frameworks */,
+				22F955CF1E457A50006096FE /* Headers */,
+				22F955D01E457A50006096FE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -135,77 +133,77 @@
 			);
 			name = Safeguard;
 			productName = Safeguard;
-			productReference = 22DC0B0E1E452FF100B12774 /* Safeguard.framework */;
+			productReference = 22F955D21E457A50006096FE /* Safeguard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		22DC0B421E4559AD00B12774 /* SafeguardTests */ = {
+		22F955DA1E457A50006096FE /* SafeguardTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22DC0B4B1E4559AD00B12774 /* Build configuration list for PBXNativeTarget "SafeguardTests" */;
+			buildConfigurationList = 22F955E91E457A51006096FE /* Build configuration list for PBXNativeTarget "SafeguardTests" */;
 			buildPhases = (
-				22DC0B3F1E4559AD00B12774 /* Sources */,
-				22DC0B401E4559AD00B12774 /* Frameworks */,
-				22DC0B411E4559AD00B12774 /* Resources */,
+				22F955D71E457A50006096FE /* Sources */,
+				22F955D81E457A50006096FE /* Frameworks */,
+				22F955D91E457A50006096FE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				22DC0B4A1E4559AD00B12774 /* PBXTargetDependency */,
+				22F955DE1E457A50006096FE /* PBXTargetDependency */,
 			);
 			name = SafeguardTests;
 			productName = SafeguardTests;
-			productReference = 22DC0B431E4559AD00B12774 /* SafeguardTests.xctest */;
+			productReference = 22F955DB1E457A50006096FE /* SafeguardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		22DC0B051E452FF100B12774 /* Project object */ = {
+		22F955C91E457A50006096FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Dan Loman";
 				TargetAttributes = {
-					22DC0B0D1E452FF100B12774 = {
+					22F955D11E457A50006096FE = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 92AC5VS8HG;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
-					22DC0B421E4559AD00B12774 = {
+					22F955DA1E457A50006096FE = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 92AC5VS8HG;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 22DC0B081E452FF100B12774 /* Build configuration list for PBXProject "Safeguard" */;
+			buildConfigurationList = 22F955CC1E457A50006096FE /* Build configuration list for PBXProject "Safeguard" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 22DC0B041E452FF100B12774;
-			productRefGroup = 22DC0B0F1E452FF100B12774 /* Products */;
+			mainGroup = 22F955C81E457A50006096FE;
+			productRefGroup = 22F955D31E457A50006096FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22DC0B0D1E452FF100B12774 /* Safeguard */,
-				22DC0B421E4559AD00B12774 /* SafeguardTests */,
+				22F955D11E457A50006096FE /* Safeguard */,
+				22F955DA1E457A50006096FE /* SafeguardTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		22DC0B0C1E452FF100B12774 /* Resources */ = {
+		22F955D01E457A50006096FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22DC0B411E4559AD00B12774 /* Resources */ = {
+		22F955D91E457A50006096FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -215,37 +213,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		22DC0B091E452FF100B12774 /* Sources */ = {
+		22F955CD1E457A50006096FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DC0B201E4531BA00B12774 /* Dictionary+Safeguard.swift in Sources */,
-				22DC0B1C1E45311D00B12774 /* Safeguard.swift in Sources */,
-				22DC0B231E45320900B12774 /* Optional+Safeguard.swift in Sources */,
-				22DC0B1E1E45312D00B12774 /* DefaultSafeLogger.swift in Sources */,
+				22F955F31E457AFF006096FE /* Dictionary+Safeguard.swift in Sources */,
+				22F955EF1E457AB4006096FE /* DefaultSafeLogger.swift in Sources */,
+				22F955F11E457ADA006096FE /* Optional+Safeguard.swift in Sources */,
+				22F955ED1E457A85006096FE /* Safeguard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22DC0B3F1E4559AD00B12774 /* Sources */ = {
+		22F955D71E457A50006096FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DC0B461E4559AD00B12774 /* SafeguardTests.swift in Sources */,
+				22F955E11E457A51006096FE /* SafeguardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22DC0B4A1E4559AD00B12774 /* PBXTargetDependency */ = {
+		22F955DE1E457A50006096FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 22DC0B0D1E452FF100B12774 /* Safeguard */;
-			targetProxy = 22DC0B491E4559AD00B12774 /* PBXContainerItemProxy */;
+			target = 22F955D11E457A50006096FE /* Safeguard */;
+			targetProxy = 22F955DD1E457A50006096FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		22DC0B141E452FF100B12774 /* Debug */ = {
+		22F955E41E457A51006096FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -298,7 +296,7 @@
 			};
 			name = Debug;
 		};
-		22DC0B151E452FF100B12774 /* Release */ = {
+		22F955E51E457A51006096FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -344,7 +342,7 @@
 			};
 			name = Release;
 		};
-		22DC0B171E452FF100B12774 /* Debug */ = {
+		22F955E71E457A51006096FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -365,7 +363,7 @@
 			};
 			name = Debug;
 		};
-		22DC0B181E452FF100B12774 /* Release */ = {
+		22F955E81E457A51006096FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -385,12 +383,12 @@
 			};
 			name = Release;
 		};
-		22DC0B4C1E4559AD00B12774 /* Debug */ = {
+		22F955EA1E457A51006096FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 92AC5VS8HG;
 				INFOPLIST_FILE = SafeguardTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = namolnad.SafeguardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,12 +396,12 @@
 			};
 			name = Debug;
 		};
-		22DC0B4D1E4559AD00B12774 /* Release */ = {
+		22F955EB1E457A51006096FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 92AC5VS8HG;
 				INFOPLIST_FILE = SafeguardTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = namolnad.SafeguardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,32 +412,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22DC0B081E452FF100B12774 /* Build configuration list for PBXProject "Safeguard" */ = {
+		22F955CC1E457A50006096FE /* Build configuration list for PBXProject "Safeguard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				22DC0B141E452FF100B12774 /* Debug */,
-				22DC0B151E452FF100B12774 /* Release */,
+				22F955E41E457A51006096FE /* Debug */,
+				22F955E51E457A51006096FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22DC0B161E452FF100B12774 /* Build configuration list for PBXNativeTarget "Safeguard" */ = {
+		22F955E61E457A51006096FE /* Build configuration list for PBXNativeTarget "Safeguard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				22DC0B171E452FF100B12774 /* Debug */,
-				22DC0B181E452FF100B12774 /* Release */,
+				22F955E71E457A51006096FE /* Debug */,
+				22F955E81E457A51006096FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		22DC0B4B1E4559AD00B12774 /* Build configuration list for PBXNativeTarget "SafeguardTests" */ = {
+		22F955E91E457A51006096FE /* Build configuration list for PBXNativeTarget "SafeguardTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				22DC0B4C1E4559AD00B12774 /* Debug */,
-				22DC0B4D1E4559AD00B12774 /* Release */,
+				22F955EA1E457A51006096FE /* Debug */,
+				22F955EB1E457A51006096FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 22DC0B051E452FF100B12774 /* Project object */;
+	rootObject = 22F955C91E457A50006096FE /* Project object */;
 }

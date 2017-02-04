@@ -1,8 +1,8 @@
 //
 //  Optional+Safeguard.swift
-//  safeguard
+//  Safeguard
 //
-//  Created by Dan Loman on 1/13/17.
+//  Created by Dan Loman on 2/3/17.
 //  Copyright © 2017 Dan Loman. All rights reserved.
 //
 

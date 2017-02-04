@@ -19,7 +19,7 @@ public class Safeguard {
     public var nilHandler: ((Bool) -> Void)?
 
     public var logger: SafeLogger? = DefaultSafeLogger()
-    
+
     public var customLoggingParams: [String: Any]?
 
     public static func configure(logger: SafeLogger? = nil, customLoggingParams: [String: Any]? = nil, nilHandler: ((Bool) -> Void)? = nil) {
