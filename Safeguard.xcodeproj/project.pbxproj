@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224519161E458D2C004CDFAB /* Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EC1E457A85006096FE /* Safeguard.swift */; };
+		224519171E458D2C004CDFAB /* DefaultSafeLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EE1E457AB4006096FE /* DefaultSafeLogger.swift */; };
+		224519181E458D2C004CDFAB /* Dictionary+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F21E457AFF006096FE /* Dictionary+Safeguard.swift */; };
+		224519191E458D2C004CDFAB /* Optional+Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955F01E457ADA006096FE /* Optional+Safeguard.swift */; };
 		22F955E11E457A51006096FE /* SafeguardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955E01E457A51006096FE /* SafeguardTests.swift */; };
 		22F955E31E457A51006096FE /* Safeguard.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F955D51E457A50006096FE /* Safeguard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22F955ED1E457A85006096FE /* Safeguard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F955EC1E457A85006096FE /* Safeguard.swift */; };
@@ -16,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		22F955DD1E457A50006096FE /* PBXContainerItemProxy */ = {
+		224519141E458D14004CDFAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22F955C91E457A50006096FE /* Project object */;
 			proxyType = 1;
@@ -147,7 +151,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				22F955DE1E457A50006096FE /* PBXTargetDependency */,
+				224519151E458D14004CDFAB /* PBXTargetDependency */,
 			);
 			name = SafeguardTests;
 			productName = SafeguardTests;
@@ -228,6 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224519161E458D2C004CDFAB /* Safeguard.swift in Sources */,
+				224519171E458D2C004CDFAB /* DefaultSafeLogger.swift in Sources */,
+				224519181E458D2C004CDFAB /* Dictionary+Safeguard.swift in Sources */,
+				224519191E458D2C004CDFAB /* Optional+Safeguard.swift in Sources */,
 				22F955E11E457A51006096FE /* SafeguardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,10 +243,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22F955DE1E457A50006096FE /* PBXTargetDependency */ = {
+		224519151E458D14004CDFAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 22F955D11E457A50006096FE /* Safeguard */;
-			targetProxy = 22F955DD1E457A50006096FE /* PBXContainerItemProxy */;
+			targetProxy = 224519141E458D14004CDFAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -284,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -331,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -428,6 +436,7 @@
 				22F955E81E457A51006096FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22F955E91E457A51006096FE /* Build configuration list for PBXNativeTarget "SafeguardTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +445,7 @@
 				22F955EB1E457A51006096FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

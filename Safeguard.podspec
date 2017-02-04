@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "http://www.instacart.com"
-  s.license      = "MIT"
-  s.author             = { "Dan" => "daniel.h.loman@gmail.com" }
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { "Dan" => "daniel.h.loman@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => 'https://github.com/namolnad/Safeguard.git', :tag => "v" + s.version.to_s }
-  s.source_files  = "Safeguard", "Safeguard/**/*.{h,m,swift}"
+  s.source       = { :git => 'https://github.com/namolnad/Safeguard.git', :tag => "v#{s.version}" }
+  s.source_files = "Safeguard", "Safeguard/**/*.{h,m,swift}", "Safeguard/*.{h,m,swift}"
 
 end
