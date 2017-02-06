@@ -30,9 +30,6 @@ By separating cascading `let` statements onto separate lines we can log the line
 ```Ruby
  github "namolnad/safeguard" 
 ```
- * Update `Cartfile.resolved` file: `carthage update safeguard`
- * Bootstrap **Safeguard** only: `carthage bootstrap safeguard --no-use-binaries --platform iOS`
- * For each of your build targets, make sure to add `Safeguard.framework` (found in the Carthage build directory) to your project's Build Phases under `Link Binary With Libraries` and in the `Carthage` section (adding `$(SRCROOT)/Carthage/Build/iOS/Safeguard.framework`)
  
 ### Cocoapods
  * Add **Safeguard** to your `Podfile`:
@@ -42,7 +39,6 @@ target 'MyApp' do
   pod 'Safeguard'
 end
 ```
- * Run `pod install`
 
 ## Configuration
 In your `AppDelegate` file or `AppConfigurator` (depending on your app's setup at launch), the ideal place to setup **Safeguard** is in `application(didFinishLaunchingWithOptions:)`. Simply add `import Safeguard` at the top of your `AppDelegate` file and call the Safeguard configure function (see the example below.) Each of the parameters is `Optional` and has a default value. 
