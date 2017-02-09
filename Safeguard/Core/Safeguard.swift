@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol SafeLogger {
-    func debug(_ message: @autoclosure @escaping () -> String)
+    func debug(message: @autoclosure @escaping () -> String)
     func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String: Any]?)
 }
 

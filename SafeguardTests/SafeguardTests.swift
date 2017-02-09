@@ -49,7 +49,7 @@ class TestLogger: SafeLogger {
         testString = message
     }
 
-    func debug(_ message: @autoclosure @escaping () -> String) {
+    func debug(message: @autoclosure @escaping () -> String) {
         setTestString(message: message())
     }
 

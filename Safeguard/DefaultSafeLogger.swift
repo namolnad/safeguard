@@ -9,7 +9,7 @@
 import Foundation
 
 class DefaultSafeLogger: SafeLogger {
-    func debug(_ message: @autoclosure @escaping () -> String) {
+    func debug(message: @autoclosure @escaping () -> String) {
         logToConsole(message: message())
     }
 
