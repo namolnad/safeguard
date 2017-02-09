@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol SafeLogger {
+public protocol SafeLoggable {
     func debug(message: @autoclosure @escaping () -> String)
     func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String: Any]?)
 }
@@ -18,12 +18,12 @@ public class Safeguard {
 
     var nilHandler: ((Bool) -> Void)?
 
-    var logger: SafeLogger? = DefaultSafeLogger()
+    var logger: SafeLoggable?
 
     var customLoggingParams: [String: Any]?
 
     // Note: - Passing nil to a parameter will not modify setting
-    public static func configure(logger: SafeLogger? = nil, customLoggingParams: [String: Any]? = nil, nilHandler: ((Bool) -> Void)? = nil) {
+    public static func configure(logger: SafeLoggable? = nil, customLoggingParams: [String: Any]? = nil, nilHandler: ((Bool) -> Void)? = nil) {
         if let logger = logger {
             instance.logger = logger
         }
@@ -35,10 +35,5 @@ public class Safeguard {
         if let nilHandler = nilHandler {
             instance.nilHandler = nilHandler
         }
-    }
-
-    // Note: allow developer to remove default logger
-    public static func nilifyLogger() {
-        instance.logger = nil
     }
 }

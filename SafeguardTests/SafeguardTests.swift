@@ -51,27 +51,4 @@ class SafeguardTests: XCTestCase {
         XCTAssertNil(testLogger.testString)
         XCTAssertNil(nilHandledString)
     }
-
-}
-
-class TestLogger: SafeLogger {
-    fileprivate var testString: String?
-
-    private func setTestString(message: String) {
-        testString = message
-    }
-
-    func debug(message: @autoclosure @escaping () -> String) {
-        setTestString(message: message())
-    }
-
-    func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String : Any]?) {
-        var propertiesString: String = ""
-
-        if let properties = properties() {
-            propertiesString = "\(properties)"
-        }
-
-        setTestString(message: "\(message()) with properties: \(propertiesString)")
-    }
 }

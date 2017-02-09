@@ -1,5 +1,5 @@
 //
-//  DefaultSafeLogger.swift
+//  SafeLogger.swift
 //  Safeguard
 //
 //  Created by Dan Loman on 2/3/17.
@@ -8,12 +8,14 @@
 
 import Foundation
 
-class DefaultSafeLogger: SafeLogger {
-    func debug(message: @autoclosure @escaping () -> String) {
+open class SafeLogger: SafeLoggable {
+    public init() {}
+
+    open func debug(message: @autoclosure @escaping () -> String) {
         logToConsole(message: message())
     }
 
-    func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String : Any]?) {
+    open func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String : Any]?) {
         var propertiesString: String = ""
 
         if let properties = properties() {

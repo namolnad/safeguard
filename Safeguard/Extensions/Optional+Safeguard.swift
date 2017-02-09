@@ -26,7 +26,7 @@ extension Optional {
                 params += customParams
             }
 
-            let safeguardLogger: SafeLogger? = Safeguard.instance.logger
+            let safeguardLogger: SafeLoggable? = Safeguard.instance.logger
 
             var isDebug = false
 
