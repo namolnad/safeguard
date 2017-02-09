@@ -12,6 +12,7 @@ import XCTest
 class SafeguardTests: XCTestCase {
     var emptyOptional: String?
     var safeOptional: String?
+    var nilHandledString: String?
 
     let testLogger = TestLogger()
 
@@ -19,8 +20,17 @@ class SafeguardTests: XCTestCase {
         super.setUp()
         emptyOptional = nil
         safeOptional = "safe"
+        nilHandledString = nil
 
-        Safeguard.configure(logger: testLogger)
+        Safeguard.configure(logger: testLogger, customLoggingParams: ["safe": "guard"], nilHandler: { [weak self] isDebug in
+            if isDebug {
+                self?.nilHandledString = "notNil"
+            } else {
+                self?.nilHandledString = ""
+            }
+
+            self?.nilHandledString = (self?.nilHandledString)! + "Safeguard"
+        })
     }
 
     override func tearDown() {
@@ -31,35 +41,14 @@ class SafeguardTests: XCTestCase {
     func testNilOptional() {
         if let _ = emptyOptional.safeguard() {} // Continue
 
-        XCTAssertNotNil(testLogger.testString)
+        XCTAssertEqual(testLogger.testString, "Guard failed with type: String and params: [\"failed_unwrap_type\": Swift.String, \"file\": \"SafeguardTests.swift\", \"safe\": \"guard\", \"called_from\": \"testNilOptional()\", \"line\": 42]")
+        XCTAssertEqual(nilHandledString, "notNilSafeguard")
     }
 
     func testNonNilOptional() {
         if let _ = safeOptional.safeguard() {} // Continue
 
         XCTAssertNil(testLogger.testString)
-    }
-
-}
-
-class TestLogger: SafeLogger {
-    var testString: String?
-
-    func setTestString(message: String) {
-        testString = message
-    }
-
-    func debug(_ message: @autoclosure @escaping () -> String) {
-        setTestString(message: message())
-    }
-
-    func warn(message: @autoclosure @escaping () -> String, properties: @autoclosure @escaping () -> [String : Any]?) {
-        var propertiesString: String = ""
-
-        if let properties = properties() {
-            propertiesString = "\(properties)"
-        }
-
-        setTestString(message: "\(message()) with properties: \(propertiesString)")
+        XCTAssertNil(nilHandledString)
     }
 }

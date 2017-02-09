@@ -26,12 +26,12 @@ extension Optional {
                 params += customParams
             }
 
-            let safeguardLogger: SafeLogger? = Safeguard.instance.logger
+            let safeguardLogger: SafeLoggable? = Safeguard.instance.logger
 
             var isDebug = false
 
             #if DEBUG
-                safeguardLogger?.debug("\(message) and params: \(params)")
+                safeguardLogger?.debug(message: "\(message) and params: \(params)")
                 isDebug = true
             #else
                 safeguardLogger?.warn(message: message, properties: params)
