@@ -14,14 +14,15 @@ public protocol SafeLogger {
 }
 
 public class Safeguard {
-    public static let instance: Safeguard = Safeguard()
+    static let instance: Safeguard = Safeguard()
 
-    public var nilHandler: ((Bool) -> Void)?
+    var nilHandler: ((Bool) -> Void)?
 
-    public var logger: SafeLogger? = DefaultSafeLogger()
+    var logger: SafeLogger? = DefaultSafeLogger()
 
-    public var customLoggingParams: [String: Any]?
+    var customLoggingParams: [String: Any]?
 
+    // Note: - Passing nil to a parameter will not modify setting
     public static func configure(logger: SafeLogger? = nil, customLoggingParams: [String: Any]? = nil, nilHandler: ((Bool) -> Void)? = nil) {
         if let logger = logger {
             instance.logger = logger
@@ -34,5 +35,10 @@ public class Safeguard {
         if let nilHandler = nilHandler {
             instance.nilHandler = nilHandler
         }
+    }
+
+    // Note: allow developer to remove default logger
+    public static func nilifyLogger() {
+        instance.logger = nil
     }
 }

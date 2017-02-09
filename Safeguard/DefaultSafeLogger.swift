@@ -23,7 +23,7 @@ class DefaultSafeLogger: SafeLogger {
         logToConsole(message: "\(message()) with properties: \(propertiesString)")
     }
 
-    func logToConsole(message: String) {
+    private func logToConsole(message: String) {
         print(message)
     }
 }
