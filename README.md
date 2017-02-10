@@ -10,6 +10,8 @@ Per Swift conventions, `guard` allows us as developers to ensure certain conditi
 
 ## Example Usage
 ```Swift
+import Safeguard
+
 let optionalString: String? = "Hi there"
 let anotherString: String? = nil
 
@@ -43,29 +45,32 @@ end
 ```
 
 ## Configuration
-In your `AppDelegate` file or `AppConfigurator` (depending on your app's setup at launch), the ideal place to setup **Safeguard** is in `application(didFinishLaunchingWithOptions:)`. Simply add `import Safeguard` at the top of your `AppDelegate` file and call the Safeguard configure function (see the example below.) Each of the parameters is `Optional` and has a default value. 
+In your `AppDelegate` file or `AppConfigurator` (depending on your app's setup at launch), the ideal place to setup **Safeguard** is in `application(didFinishLaunchingWithOptions:)`. Simply add `import Safeguard` at the top of your `AppDelegate` file and call the Safeguard `configure()` function (see the example below.) Each of the parameters is `Optional` and has a default value of `nil`, allowing you the flexibility to configure only a single, specific parameter with each `configure()` call, if you so choose. Safeguard parameters passed `nil` or left empty in the `configure()` function, will not be modified. 
 ```Swift
  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Safeguard.configure(logger: myLogger, customLoggingParams: safeguardParams, nilHandler: { isDebug in
-        if isDebug {
-            presentLocalAlert()
-        }
-    })
+        Safeguard.configure(logger: myLogger, customLoggingParams: safeguardParams, nilHandler: safeguardNilHandler)
+        return true
 }
 ```
 ##### Logging
-If you declare protocol conformance to `SafeLogger` for your existing logger, you can add it as a parameter in Safeguard's configure function. Without this, the default behavior is to print to console, unless the instance's logger is set manually: `Safeguard.instance.logger = nil` (setting to nil will remove default console logging.)
+By default, no logger is set. You can use our basic console logger `SafeLogger` by creating an instance and passing it to Safeguard's `configure()` function. 
+```Swift
+let myLogger = SafeLogger()
+```
+If you have needs beyond console logging, we recommend using a more robust logger (here at Instacart we use [Willow](https://github.com/Nike-Inc/Willow)). If your existing logger conforms to Safeguard's `SafeLoggable` protocol, you can pass it as a parameter in Safeguard's `configure()` function.
 
 ##### Custom Params
-At configuration, Safeguard takes a `[String: Any]` param, which can be used to pass up additional useful information at the time of logging, such as custom session info. If nothing is passed here, only the default parameters will be logged, which are: `#file`, `#line`, `#function` and `Wrapped.Type`.
-The custom params can also be set directly, if needed: `Safeguard.instance.customLoggingParams = ["Crazy": "Info"]`
+At configuration, Safeguard takes a `[String: Any]` param, which can be used to pass up additional useful information at the time of logging, such as custom session info. If nothing is passed here, only the default parameters will be logged, which are: `#file`, `#line`, `#function` and `Wrapped.Type`.  
+```Swift
+let safeguardParams: [String: Any] = ["Crazy": "Info"]
+```
 
 ##### Nil Handler
-Lastly, the `configure` function takes an optional `nilHandler`, which is a closure that takes a `Bool` and returns nothing — `((Bool) -> Void)?`. After logging has executed, this convenience callback is called (if non-nil) everytime an `Optional` has failed to unwrap. If the DEBUG flag has been set by your preprocessor macros, you will also get the additional information of whether the app is running in DEBUG mode (which defaults to false if the flag has not been set, FYI.)
+Lastly, the `configure()` function takes an optional `nilHandler`, which is a closure that takes a `Bool` and returns nothing — `((Bool) -> Void)?`. After logging has executed, this convenience callback is called (if non-nil) everytime an `Optional` has failed to unwrap. If the DEBUG flag has been set by your preprocessor macros, you will also get the additional information of whether the app is running in DEBUG mode (which defaults to `false` if the flag has not been set, FYI.)
 
-This callback can be useful for scenarios where you perhaps want to cause a crash, or present an alert during development, so you can be sure you notice the issue immediately. Similarly to above, this can be set directly:
+This callback can be useful for scenarios where you perhaps want to cause a crash, or present an alert during development, so you can be sure you notice the issue immediately.
 ```Swift
-Safeguard.instance.nilHandler = { isDebug in
+let safeguardNilHandler: (Bool) -> Void = { isDebug in
     if isDebug {
         assertionFailure()
     }
@@ -75,7 +80,6 @@ Safeguard.instance.nilHandler = { isDebug in
 That's all for now, happy `safeguard()`ing!
 
 ## Want to Help Improve Safeguard?
-
 That’s awesome! Here are a couple of ways you can help:
 
  * [Report issues or suggest new features](https://github.com/namolnad/safeguard/issues)
