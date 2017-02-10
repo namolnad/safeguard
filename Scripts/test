@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail
+
+SIMULATOR_UDID=""
+open_simulator() {
+    set +x
+    SIMULATOR_UDID=$(instruments -s devices | grep "iPhone 7 (10.[0-9]*) \[" | sort | head -1 | awk -F '[\[]' '{print $2}' | awk -F '[\]]' '{print $1}')
+    set +o errexit
+    set -x
+    killall Simulator 2>/dev/null
+    xcrun instruments -w "$SIMULATOR_UDID" 2>/dev/null
+    set -o errexit
+}
+
+test_build() {
+	set +x
+    local destination="platform=iOS Simulator,id=$SIMULATOR_UDID"
+
+    xcodebuild -project Safeguard.xcodeproj -scheme "Safeguard" -sdk iphonesimulator -destination "$destination" build test RUN_CLANG_STATIC_ANALYZER=NO
+}
+
+open_simulator
+set -o pipefail && test_build
