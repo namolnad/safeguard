@@ -57,7 +57,7 @@ By default, no logger is set. You can use our basic console logger `SafeLogger` 
 ```Swift
 let myLogger = SafeLogger()
 ```
-If you have needs beyond console logging, we recommend using a more robust logger (here at Instacart we use [Willow](https://github.com/Nike-Inc/Willow)){:target="_blank"}. If your existing logger conforms to Safeguard's `SafeLoggable` protocol, you can pass it as a parameter in Safeguard's `configure()` function.
+If you have needs beyond console logging, we recommend using a more robust logger (here at Instacart we use [Willow](https://github.com/Nike-Inc/Willow){:target="_blank"}). If your existing logger conforms to Safeguard's `SafeLoggable` protocol, you can pass it as a parameter in Safeguard's `configure()` function.
 
 ##### Custom Params
 At configuration, Safeguard takes a `[String: Any]` param, which can be used to pass up additional useful information at the time of logging, such as custom session info. If nothing is passed here, only the default parameters will be logged, which are: `#file`, `#line`, `#function` and `Wrapped.Type`.  
