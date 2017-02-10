@@ -1,4 +1,4 @@
-# Safeguard [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+# Safeguard [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/namolnad/safeguard.svg?branch=master)](https://travis-ci.org/namolnad/safeguard)
 A lightweight framework which extends `Optional` and plugs into your existing logging system to help identify issues lost in Swift's `guard` statements.
 
 ![Safeguard](safeguard.png "Safeguard")
