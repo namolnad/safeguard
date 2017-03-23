@@ -10,7 +10,7 @@ import Foundation
 
 extension Optional {
     public func safeguard(file: String = #file, caller: String = #function, line: Int = #line) -> Optional {
-        if self == nil {
+        if case .none = self {
             let type: Wrapped.Type = Wrapped.self
             let fileName: String = URL(fileURLWithPath: file).lastPathComponent
             let message: String = "Guard failed with type: \(type)"
