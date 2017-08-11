@@ -16,6 +16,10 @@ class SafeguardTests: XCTestCase {
 
     let testLogger = TestLogger()
 
+    var expectedLabel: String {
+        return "emptyOptional | "
+    }
+
     override func setUp() {
         super.setUp()
         emptyOptional = nil
@@ -41,7 +45,7 @@ class SafeguardTests: XCTestCase {
     func testNilOptional() {
         if let _ = emptyOptional.safeguard() {} // Continue
 
-        XCTAssertEqual(testLogger.testString, "Guard failed with type: String and params: [\"failed_unwrap_type\": Swift.String, \"file\": \"SafeguardTests.swift\", \"safe\": \"guard\", \"called_from\": \"testNilOptional()\", \"line\": 42]")
+        XCTAssertEqual(testLogger.testString, expectedNonLabelString(functionName: "testNilOptional()",lineNumber: "46"))
         XCTAssertEqual(nilHandledString, "notNilSafeguard")
     }
 
@@ -50,5 +54,16 @@ class SafeguardTests: XCTestCase {
 
         XCTAssertNil(testLogger.testString)
         XCTAssertNil(nilHandledString)
+    }
+
+    func testCustomLabel() {
+        if let _ = emptyOptional.safeguard("emptyOptional") {} // Continue
+
+        XCTAssertEqual(testLogger.testString, expectedLabel + expectedNonLabelString(functionName: "testCustomLabel()", lineNumber: "60"))
+        XCTAssertEqual(nilHandledString, "notNilSafeguard")
+    }
+
+    func expectedNonLabelString(functionName: String, lineNumber: String) -> String {
+        return "Unexpected nil value for String type with params: [\"failed_unwrap_type\": Swift.String, \"file\": \"SafeguardTests.swift\", \"safe\": \"guard\", \"called_from\": \"\(functionName)\", \"line\": \(lineNumber)]"
     }
 }

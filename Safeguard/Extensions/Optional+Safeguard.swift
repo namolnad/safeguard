@@ -45,7 +45,7 @@ extension Optional {
             var isDebug = false
 
             #if DEBUG
-                safeguardLogger?.debug(message: "\(message) and params: \(params)")
+                safeguardLogger?.debug(message: "\(message) with params: \(params)")
                 isDebug = true
             #else
                 safeguardLogger?.warn(message: message, properties: params)
