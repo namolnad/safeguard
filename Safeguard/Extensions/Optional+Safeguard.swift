@@ -9,11 +9,25 @@
 import Foundation
 
 extension Optional {
-    public func safeguard(file: String = #file, caller: String = #function, line: Int = #line) -> Optional {
+    /// safeguard() passes information to your application's logger if an unexpected nil value is encountered
+    ///
+    /// - Parameters:
+    ///   - label: An unrequired label to provide custom messaging or variable name, if desired
+    ///   - file: The file where the nil variable is located
+    ///   - caller: The location/calling function where the nil variable is located
+    ///   - line: The line #  where the nil variable is located
+    /// - Returns: The unaltered Optional value
+    public func safeguard(_ label: String? = nil, file: String = #file, caller: String = #function, line: Int = #line) -> Optional {
         if case .none = self {
             let type: Wrapped.Type = Wrapped.self
             let fileName: String = URL(fileURLWithPath: file).lastPathComponent
-            let message: String = "Guard failed with type: \(type)"
+            let defaultMessage: String = "Unexpected nil value for \(type) type"
+
+            var message: String = defaultMessage
+
+            if let label = label {
+                message = "\(label) | \(defaultMessage)"
+            }
 
             var params: [String: Any] = [
                 "failed_unwrap_type": type,

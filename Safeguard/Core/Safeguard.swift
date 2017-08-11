@@ -22,7 +22,13 @@ public class Safeguard {
 
     var customLoggingParams: [String: Any]?
 
-    // Note: - Passing nil to a parameter will not modify setting
+    /// Safeguard's initial configuration function -- required for proper functionality
+    /// Note: - Passing nil to a parameter will not modify current setting
+    ///
+    /// - Parameters:
+    ///   - logger: Your Logger which conforms to the SafeLoggable protocol
+    ///   - customLoggingParams: Any custom logging params to be included with every log
+    ///   - nilHandler: Custom handling in the the case of an Optional.none
     public static func configure(logger: SafeLoggable? = nil, customLoggingParams: [String: Any]? = nil, nilHandler: ((Bool) -> Void)? = nil) {
         if let logger = logger {
             instance.logger = logger
