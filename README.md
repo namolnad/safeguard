@@ -17,14 +17,14 @@ let anotherString: String? = nil
 
 func testFunction() {
     guard let optionalString = optionalString.safeguard(),
-          let anotherString = anotherString.safeguard() else {
+          let anotherString = anotherString.safeguard("anotherString") else {
         return
     }
 
     print("This is \(optionalString) and \(anotherString) in a sentence.")
 }
 
-testFunction() // Logs filename, caller/function name, line # for anotherString, and type (String here)
+testFunction() // Logs label (passed as "anotherString" here), filename, caller/function name, line # for anotherString, and type (String here)
 ```
 By separating cascading `let` statements onto separate lines we can log the line number to the specific failed assignment/unwrap in the guard statement. Without this, it can be difficult to tell which unwrap may have failed.
 

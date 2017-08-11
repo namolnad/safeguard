@@ -10,7 +10,5 @@ import Foundation
 
 func += <K, V> (left: inout [K: V], right: [K: V]?) {
     guard let right = right else { return }
-    right.forEach { key, value in
-        left.updateValue(value, forKey: key)
-    }
+    right.forEach { left.updateValue($1, forKey: $0) }
 }
